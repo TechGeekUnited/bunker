@@ -196,6 +196,8 @@
 						if(ver != d["version"]){
 							var dl = links[i]+`/index.html?intent=update&target=${d["version"]}&source=${ver}`
 							document.getElementById("aut").innerHTML = `<span class="emph">New update: ${d["title"]}</span><br>Severity: ${d["severity"]}<br>Download: <a href="javascript:dlnew('${dl}');">here</a>`
+						}else{
+							document.getElementById("aut").innerHTML="Bunker is up-to-date";
 						}
 						break;
 					}catch(e){
